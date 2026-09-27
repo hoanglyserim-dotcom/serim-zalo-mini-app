@@ -1,0 +1,17 @@
+{
+  "name": "serim-work-api",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "db:local": "wrangler d1 execute serim-work-db --local --file=migrations/0001_prototype.sql",
+    "db:seed-local": "wrangler d1 execute serim-work-db --local --file=seed-dev.sql"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260927.1",
+    "typescript": "^5.6.0",
+    "wrangler": "^4.142.0"
+  }
+}

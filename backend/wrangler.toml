@@ -1,0 +1,17 @@
+name = "serim-work-api"
+main = "src/index.ts"
+compatibility_date = "2026-09-01"
+
+[observability]
+enabled = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "serim-work-db"
+# TODO: thay bằng Database ID thật (Cloudflare → D1 → serim-work-db → mục "Database ID").
+# Database ID không phải mật khẩu, để ở đây là an toàn.
+database_id = "00000000-0000-0000-0000-000000000000"
+
+# Secret KHÔNG ghi vào file này. Nhập trong Cloudflare → Worker → Settings → Variables and Secrets:
+#   ZALO_APP_SECRET  — App Secret của Mini App (bắt buộc khi chạy thật)
+#   DEV_TOKEN        — (tuỳ chọn) chỉ dùng khi test không qua Zalo. Xoá đi khi prototype xong.
